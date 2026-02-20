@@ -73,7 +73,9 @@ fun CertificatingCourse(name: String, number: Int, course: String, modifier: Mod
             modifier = modifier
                 .fillMaxSize()
                 .padding(25.dp),
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -103,7 +105,7 @@ fun CertificatingCourse(name: String, number: Int, course: String, modifier: Mod
                     modifier = modifier.size(50.dp, 50.dp)
                 )
             }
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(1.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceAround,
@@ -118,7 +120,7 @@ fun CertificatingCourse(name: String, number: Int, course: String, modifier: Mod
                     textAlign = TextAlign.Center
                 )
             }
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(1.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceAround,
@@ -134,7 +136,7 @@ fun CertificatingCourse(name: String, number: Int, course: String, modifier: Mod
                     textAlign = TextAlign.Center
                 )
             }
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(1.dp))
             Text(
                 text = "has completed a $number hours course on",
                 fontSize = 15.sp,
@@ -149,14 +151,14 @@ fun CertificatingCourse(name: String, number: Int, course: String, modifier: Mod
                     .fillMaxWidth(),
                 textAlign = TextAlign.Center
             )
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(1.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceAround,
                 modifier = modifier.fillMaxWidth()
             )
             {
-                Column() {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Image(
                         painter = painterResource(
                             id = R.drawable.firma_1
@@ -178,8 +180,8 @@ fun CertificatingCourse(name: String, number: Int, course: String, modifier: Mod
                         fontStyle = FontStyle.Italic
                     )
                 }
-                Spacer(modifier = Modifier.height(5.dp))
-                Column() {
+                Spacer(modifier = Modifier.height(1.dp))
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Image(
                         painter = painterResource(
                             id = R.drawable.firma_2
